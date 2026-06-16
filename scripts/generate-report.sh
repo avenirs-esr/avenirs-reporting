@@ -53,7 +53,7 @@ echo "- Remaining: $REMAINING" >> "$OUTPUT_FILE"
 echo "- Progress: $PROGRESS%" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-jq -r --arg m "$milestone" '.data.organization.projectV2.items.nodes[] | select(.content.milestone.title==$m) | "- #(.content.number) - (.content.title)"' data.json >> "$OUTPUT_FILE"
+jq -r --arg m "$milestone" '.data.organization.projectV2.items.nodes[] | select(.content.milestone.title==$m) | "- #\(.content.number) - \(.content.title)"' data.json >> "$OUTPUT_FILE"
 
 echo "" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
