@@ -11,6 +11,8 @@ echo "" >> $OUTPUT_FILE
 
 # 1. Milestones les plus utilisées
 
+jq '.data.organization.projectV2.items.nodes[0]' data.json
+
 FILTERED=$(jq -r '
 .data.organization.projectV2.items.nodes[]
 | select(.content.milestone != null)
