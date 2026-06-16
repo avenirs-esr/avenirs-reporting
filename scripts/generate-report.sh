@@ -35,9 +35,9 @@ while IFS= read -r milestone; do
 echo "## 🗂 Milestone: $milestone" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-TOTAL=$(jq --arg m "$milestone" '.data.organization.projectV2.items.nodes[] | select(.content.milestone.title==$m) | select((.fieldValues.nodes[]? | select(.field.name=="Type") | .name) == "User Story")' data.json | jq -s 'length')
+TOTAL=$(jq --arg m "$milestone" '.data.organization.projectV2.items.nodes[] | select(.content.milestone.title==$m) | select(any(.fieldValues.nodes[]?; .field.name=="Type" and .name=="User Story"))' data.json | jq -s 'length')
 
-DONE=$(jq --arg m "$milestone" '.data.organization.projectV2.items.nodes[] | select(.content.milestone.title==$m) | select(.content.state=="CLOSED") | select((.fieldValues.nodes[]? | select(.field.name=="Type") | .name) == "User Story")' data.json | jq -s 'length')
+DONE=$(jq --arg m "$milestone" '.data.organization.projectV2.items.nodes[] | select(.content.milestone.title==$m) | select(.content.state=="CLOSED") | select(any(.fieldValues.nodes[]?; .field.name=="Type" and .name=="User Story"))' data.json | jq -s 'length')
 
 REMAINING=$((TOTAL - DONE))
 
@@ -54,12 +54,12 @@ echo "- Progress: $PROGRESS%" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
 echo "### ✅ Done ($DONE)" >> "$OUTPUT_FILE"
-jq -r --arg m "$milestone" '.data.organization.projectV2.items.nodes[] | select(.content.milestone.title==$m) | select(.content.state=="CLOSED") | select((.fieldValues.nodes[]? | select(.field.name=="Type") | .name) == "User Story") | "- #(.content.number) - (.content.title)"' data.json >> "$OUTPUT_FILE"
+jq -r --arg m "$milestone" '.data.organization.projectV2.items.nodes[] | select(.content.milestone.title==$m) | select(.content.state=="CLOSED") | select(any(.fieldValues.nodes[]?; .field.name=="Type" and .name=="User Story")) | "- #(.content.number) - (.content.title)"' data.json >> "$OUTPUT_FILE"
 
 echo "" >> "$OUTPUT_FILE"
 
 echo "### ⏳ Remaining (top 20)" >> "$OUTPUT_FILE"
-jq -r --arg m "$milestone" '.data.organization.projectV2.items.nodes[] | select(.content.milestone.title==$m) | select(.content.state!="CLOSED") | select((.fieldValues.nodes[]? | select(.field.name=="Type") | .name) == "User Story") | "- #(.content.number) - (.content.title)"' data.json | head -20 >> "$OUTPUT_FILE"
+jq -r --arg m "$milestone" '.data.organization.projectV2.items.nodes[] | select(.content.milestone.title==$m) | select(.content.state!="CLOSED") | select(any(.fieldValues.nodes[]?; .field.name=="Type" and .name=="User Story")) | "- #(.content.number) - (.content.title)"' data.json | head -20 >> "$OUTPUT_FILE"
 
 echo "" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
