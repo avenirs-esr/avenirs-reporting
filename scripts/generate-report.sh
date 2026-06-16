@@ -13,79 +13,82 @@ echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 1. Extraction milestones (SAFE)
+# 1. Extraire milestones
 
 # -------------------------------
 
-MILESTONES_RAW=$(jq -r '
+jq -r '
 .data.organization.projectV2.items.nodes[]
 | select(.content.milestone != null)
 | .content.milestone.title
-' data.json)
+' data.json > milestones.txt
 
-FILTERED=$(echo "$MILESTONES_RAW" 
-| sort 
-| uniq -c 
-| sort -nr 
-| head -3 
-| awk '{print $2}' 
-| jq -R . 
-| jq -s .)
+sort milestones.txt | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones_filtered.txt
 
 echo "## 🎯 Milestones suivies" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
-echo "$FILTERED" | jq -r '.[] | "- " + .' >> "$OUTPUT_FILE"
+
+while read m; do
+echo "- $m" >> "$OUTPUT_FILE"
+done < milestones_filtered.txt
+
 echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 2. Extraction issues
+# 2. Extraire issues filtrées
 
 # -------------------------------
 
-ISSUES=$(jq --argjson milestones "$FILTERED" '
+jq '
 .data.organization.projectV2.items.nodes[]
 | select(.content != null)
 | select(.content.milestone != null)
-| select(.content.milestone.title as $m | $milestones | index($m))
 | {
 number: .content.number,
 title: .content.title,
 state: (.content.state // "OPEN"),
 milestone: .content.milestone.title
 }
-' data.json)
+' data.json > issues.json
 
 # -------------------------------
 
-# 3. Agrégation
+# 3. Traitement par milestone
 
 # -------------------------------
 
-echo "$ISSUES" | jq -r -s '
-group_by(.milestone)
-| .[]
-| (
-{
-milestone: .[0].milestone,
-total: length,
-done: map(select(.state=="CLOSED")) | length,
-remaining: map(select(.state!="CLOSED")) | length,
-list: (map("- #" + (.number|tostring) + " - " + .title) | join("\n"))
-}
-)
-| .progress = (if .total > 0 then ((.done * 100) / .total | floor) else 0 end)
-| "## 🗂 Milestone: " + .milestone,
-"",
-"- Total: " + (.total|tostring),
-"- Done: " + (.done|tostring),
-"- Remaining: " + (.remaining|tostring),
-"- Progress: " + (.progress|tostring) + "%",
-"",
-.list,
-"",
-""
-' >> "$OUTPUT_FILE"
+while read milestone; do
+
+echo "## 🗂 Milestone: $milestone" >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+
+MATCHING=$(jq --arg m "$milestone" '
+select(.milestone == $m)
+' issues.json)
+
+TOTAL=$(echo "$MATCHING" | jq -s 'length')
+DONE=$(echo "$MATCHING" | jq -s 'map(select(.state=="CLOSED")) | length')
+REMAINING=$((TOTAL - DONE))
+
+if [ "$TOTAL" -gt 0 ]; then
+PROGRESS=$((DONE * 100 / TOTAL))
+else
+PROGRESS=0
+fi
+
+echo "- Total: $TOTAL" >> "$OUTPUT_FILE"
+echo "- Done: $DONE" >> "$OUTPUT_FILE"
+echo "- Remaining: $REMAINING" >> "$OUTPUT_FILE"
+echo "- Progress: $PROGRESS%" >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+
+echo "$MATCHING" | jq -r '"- #(.number) - (.title)"' >> "$OUTPUT_FILE"
+
+echo "" >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+
+done < milestones_filtered.txt
 
 # -------------------------------
 
