@@ -13,12 +13,15 @@ echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 1. milestones
+# 1. Génération des milestones propres
 
 # -------------------------------
 
 jq -r '.data.organization.projectV2.items.nodes[] | select(.content.milestone != null) | .content.milestone.title' data.json 
-| sort | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones.txt
+| tr -d '\r' 
+| sed '/^\s*$/d' 
+| sort -u 
+| head -3 > milestones.txt
 
 echo "## 🎯 Milestones suivies" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
@@ -27,11 +30,11 @@ echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 2. traitement
+# 2. Traitement par milestone
 
 # -------------------------------
 
-while read milestone; do
+while IFS= read -r milestone; do
 
 echo "## 🗂 Milestone: $milestone" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
@@ -60,5 +63,11 @@ echo "" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
 done < milestones.txt
+
+# -------------------------------
+
+# 3. latest
+
+# -------------------------------
 
 cp "$OUTPUT_FILE" "$OUTPUT_DIR/latest.md"
