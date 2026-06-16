@@ -9,92 +9,100 @@ mkdir -p $OUTPUT_DIR
 echo "# 📊 User Stories Report - $DATE" > $OUTPUT_FILE
 echo "" >> $OUTPUT_FILE
 
-# 1. Extraire milestones
+# 1. Milestones les plus utilisées
 
-MILESTONES=$(jq '
-[
+FILTERED=$(jq -r '
 .data.organization.projectV2.items.nodes[]
 | select(.content.milestone != null)
-| {
-title: .content.milestone.title,
-due: .content.milestone.dueOn
-}
-]
-| unique_by(.title)
-| sort_by(.due)
-' data.json)
-
-# 2. Pivot (milieu)
-
-INDEX=$(echo "$MILESTONES" | jq '
-to_entries
-| (length / 2 | floor)
-')
-
-# 3. Sélection -1 / courant / +1
-
-FILTERED=$(echo "$MILESTONES" | jq -r --argjson idx "$INDEX" '
-[
-.[$idx - 1],
-.[$idx],
-.[$idx + 1]
-]
-| map(select(. != null))
-| map(.title)
-| unique
-')
+| .content.milestone.title
+' data.json | sort | uniq -c | sort -nr | head -3 | awk '{print $2}' | jq -R . | jq -s .)
 
 echo "## 🎯 Milestones suivies" >> $OUTPUT_FILE
 echo "" >> $OUTPUT_FILE
 echo "$FILTERED" | jq -r '.[] | "- " + .' >> $OUTPUT_FILE
 echo "" >> $OUTPUT_FILE
 
-# 4. Extraction + calcul V2
+# 2. Extraction complète
 
 jq --argjson milestones "$FILTERED" '
 .data.organization.projectV2.items.nodes[]
 | select(.content != null)
 | select(.content.milestone != null)
 | select(.content.milestone.title as $m | $milestones | index($m))
+
+# Type depuis Project
+
+| .type = (
+.fieldValues.nodes[]
+| select(.field.name=="Type")
+| .name
+)
+
+# Epic depuis body
+
+| .epic = (
+.content.body // ""
+| capture("#(?<id>[0-9]+)")?.id // "No Epic"
+)
+
 | {
 number: .content.number,
 title: .content.title,
-milestone: .content.milestone.title,
 state: .content.state,
-is_bug: (
-[.content.labels.nodes[].name]
-| map(ascii_downcase)
-| index("bug")
-) != null
+milestone: .content.milestone.title,
+type: .type,
+epic: .epic
 }
 ' data.json | jq -s '
 group_by(.milestone)
-| sort_by(.[0].milestone)
 | .[]
 | (
 . as $items
-| {
-milestone: .[0].milestone,
-total: length,
-done: map(select(.state=="CLOSED")) | length,
-remaining: map(select(.state!="CLOSED")) | length,
-bugs_open: map(select(.is_bug == true and .state!="CLOSED")) | length
-}
-)
-| .progress = (if .total > 0 then ((.done * 100) / .total | floor) else 0 end)
-| "## 🗂 Milestone: " + .milestone,
-"",
-"- Total issues: " + (.total|tostring),
-"- Done: " + (.done|tostring),
-"- Remaining: " + (.remaining|tostring),
-"- Bugs ouverts: " + (.bugs_open|tostring),
-"- Progress: " + (.progress|tostring) + "%",
-"",
-($items | map("- #" + (.number|tostring) + " - " + .title) | join("\n")),
-"",
-""
-' >> $OUTPUT_FILE
 
-# latest
+```
+| "## 🗂 Milestone: " + .[0].milestone,
+  ""
+
+# -------- EPICS / US --------
+, "### 📦 Epics (fonctionnel)",
+  ""
+
+, (
+    map(select(.type=="User Story"))
+    | group_by(.epic)
+    | .[]
+    | {
+        epic: .[0].epic,
+        total: length,
+        done: map(select(.state=="CLOSED")) | length
+      }
+    | .progress = (if .total > 0 then ((.done * 100) / .total | floor) else 0 end)
+    | "#### Epic #" + .epic,
+      "- Total US: " + (.total|tostring),
+      "- Done: " + (.done|tostring),
+      "- Progress: " + (.progress|tostring) + "%",
+      ""
+  )
+
+# -------- BUGS --------
+, "### 🐞 Bugs",
+  ""
+
+, (
+    map(select(.type=="Bug")) as $bugs
+    | {
+        total: ($bugs | length),
+        open: ($bugs | map(select(.state!="CLOSED")) | length),
+        closed: ($bugs | map(select(.state=="CLOSED")) | length)
+      }
+    | "- Total: " + (.total|tostring),
+      "- Ouverts: " + (.open|tostring),
+      "- Fermés: " + (.closed|tostring),
+      ""
+  )
+```
+
+)
+' >> $OUTPUT_FILE
 
 cp $OUTPUT_FILE $OUTPUT_DIR/latest.md
