@@ -39,13 +39,25 @@ jobs:
                             title
                             state
                             milestone {
-                            title
+                              title
                             }
+                          }
                         }
+                        fieldValues(first: 20) {
+                          nodes {
+                          ... on ProjectV2ItemFieldSingleSelectValue {
+                            name
+                            field {
+                            ... on ProjectV2SingleSelectField {
+                                name
+                            }
+                            }
+                          }
+                          }
                         }
+                      }
                     }
-                    }
-                }
+                  }
                 }
             }' > data.json
         env:
