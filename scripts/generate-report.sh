@@ -24,6 +24,8 @@ echo "" >> "$OUTPUT_FILE"
 
 # 2. issues.json (UNE SEULE LIGNE jq)
 
+jq '.data.organization.projectV2.items.nodes[0:5]' data.json
+
 jq '[.data.organization.projectV2.items.nodes[] | select(.content != null and .content.__typename=="Issue" and .content.milestone != null) | {number: .content.number, title: .content.title, state: (.content.state // "OPEN"), milestone: .content.milestone.title}]' data.json > issues.json
 
 # 3. traitement
