@@ -29,7 +29,6 @@ jobs:
                         number
                         title
                         state
-                        type
                         milestone {
                             title
                         }
