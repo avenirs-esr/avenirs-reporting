@@ -13,46 +13,50 @@ echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 1. milestones
+# 1. Extraire milestones
 
 # -------------------------------
 
 jq -r '
 .data.organization.projectV2.items.nodes[]
+| select(.content != null)
+| select(.content.__typename == "Issue")
 | select(.content.milestone != null)
 | .content.milestone.title
-' data.json | sort | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones.txt
+' data.json 
+| sort | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones.txt
 
 echo "## 🎯 Milestones suivies" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-cat milestones.txt | sed 's/^/- /' >> "$OUTPUT_FILE"
+sed 's/^/- /' milestones.txt >> "$OUTPUT_FILE"
 
 echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 2. extraction JSON propre
+# 2. Construire issues.json (TABLEAU JSON PROPRE)
 
 # -------------------------------
 
 jq '
 [
-  .data.organization.projectV2.items.nodes[]
-  | select(.content != null)
-  | select(.content.milestone != null)
-  | {
-      number: .content.number,
-      title: .content.title,
-      state: (.content.state // "OPEN"),
-      milestone: .content.milestone.title
-    }
+.data.organization.projectV2.items.nodes[]
+| select(.content != null)
+| select(.content.__typename == "Issue")
+| select(.content.milestone != null)
+| {
+number: .content.number,
+title: .content.title,
+state: (.content.state // "OPEN"),
+milestone: .content.milestone.title
+}
 ]
 ' data.json > issues.json
 
 # -------------------------------
 
-# 3. traitement par milestone (SANS variable JSON)
+# 3. Traitement par milestone
 
 # -------------------------------
 
@@ -62,11 +66,11 @@ echo "## 🗂 Milestone: $milestone" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
 TOTAL=$(jq --arg m "$milestone" '
-select(.milestone == $m)
+.[] | select(.milestone == $m)
 ' issues.json | jq -s 'length')
 
 DONE=$(jq --arg m "$milestone" '
-select(.milestone == $m and .state=="CLOSED")
+.[] | select(.milestone == $m and .state=="CLOSED")
 ' issues.json | jq -s 'length')
 
 REMAINING=$((TOTAL - DONE))
@@ -84,7 +88,7 @@ echo "- Progress: $PROGRESS%" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
 jq -r --arg m "$milestone" '
-select(.milestone == $m)
+.[] | select(.milestone == $m)
 | "- #(.number) - (.title)"
 ' issues.json >> "$OUTPUT_FILE"
 
