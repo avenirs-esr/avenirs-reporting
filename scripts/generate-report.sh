@@ -36,7 +36,7 @@ echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 2. Extraire issues filtrées
+# 2. Extraire issues (AVEC state)
 
 # -------------------------------
 
@@ -47,7 +47,7 @@ jq '
 | {
 number: .content.number,
 title: .content.title,
-state: (.content.state // "OPEN"),
+state: .content.state,
 milestone: .content.milestone.title
 }
 ' data.json > issues.json
