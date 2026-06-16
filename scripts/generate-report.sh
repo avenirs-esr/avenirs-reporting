@@ -11,33 +11,22 @@ mkdir -p "$OUTPUT_DIR"
 echo "# 📊 User Stories Report - $DATE" > "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-# -------------------------------
+# 1. milestones (UNE SEULE LIGNE jq)
 
-# 1. milestones
+jq -r '.data.organization.projectV2.items.nodes[] | select(.content != null and .content.__typename=="Issue" and .content.milestone != null) | .content.milestone.title' data.json > milestones_raw.txt
 
-# -------------------------------
-
-jq -r '.data.organization.projectV2.items.nodes[] | select(.content != null) | select(.content.__typename=="Issue") | select(.content.milestone != null) | .content.milestone.title' data.json 
-| sort | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones.txt
+sort milestones_raw.txt | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones.txt
 
 echo "## 🎯 Milestones suivies" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 sed 's/^/- /' milestones.txt >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-# -------------------------------
+# 2. issues.json (UNE SEULE LIGNE jq)
 
-# 2. issues.json (TABLEAU)
-
-# -------------------------------
-
-jq '[.data.organization.projectV2.items.nodes[] | select(.content != null) | select(.content.__typename=="Issue") | select(.content.milestone != null) | {number: .content.number, title: .content.title, state: (.content.state // "OPEN"), milestone: .content.milestone.title}]' data.json > issues.json
-
-# -------------------------------
+jq '[.data.organization.projectV2.items.nodes[] | select(.content != null and .content.__typename=="Issue" and .content.milestone != null) | {number: .content.number, title: .content.title, state: (.content.state // "OPEN"), milestone: .content.milestone.title}]' data.json > issues.json
 
 # 3. traitement
-
-# -------------------------------
 
 while read milestone; do
 

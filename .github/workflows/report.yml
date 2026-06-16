@@ -44,6 +44,7 @@ jobs:
 
       - name: Generate report
         run: |
+          sed -i 's/\r$//' scripts/generate-report.sh
           chmod +x scripts/generate-report.sh
           ./scripts/generate-report.sh
 
