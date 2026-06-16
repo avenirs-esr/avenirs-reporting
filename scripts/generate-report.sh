@@ -37,15 +37,17 @@ echo "" >> "$OUTPUT_FILE"
 # -------------------------------
 
 jq '
-.data.organization.projectV2.items.nodes[]
-| select(.content != null)
-| select(.content.milestone != null)
-| {
-number: .content.number,
-title: .content.title,
-state: (.content.state // "OPEN"),
-milestone: .content.milestone.title
-}
+[
+  .data.organization.projectV2.items.nodes[]
+  | select(.content != null)
+  | select(.content.milestone != null)
+  | {
+      number: .content.number,
+      title: .content.title,
+      state: (.content.state // "OPEN"),
+      milestone: .content.milestone.title
+    }
+]
 ' data.json > issues.json
 
 # -------------------------------
