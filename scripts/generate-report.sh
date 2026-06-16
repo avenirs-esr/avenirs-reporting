@@ -17,8 +17,7 @@ echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-jq -r '.[] | select(.content.milestone != null) | .content.milestone.title' data.json 
-| sort | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones.txt
+jq -r '.[] | select(.content.milestone != null) | .content.milestone.title' data.json | sort | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones.txt
 
 echo "## 🎯 Milestones suivies" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
@@ -27,7 +26,7 @@ echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 2. traitement
+# 2. boucle
 
 # -------------------------------
 
@@ -37,7 +36,6 @@ echo "## 🗂 Milestone: $milestone" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
 TOTAL=$(jq --arg m "$milestone" '.[] | select(.content.milestone.title==$m)' data.json | jq -s 'length')
-
 DONE=$(jq --arg m "$milestone" '.[] | select(.content.milestone.title==$m and .content.state=="CLOSED")' data.json | jq -s 'length')
 
 REMAINING=$((TOTAL - DONE))
@@ -54,10 +52,7 @@ echo "- Remaining: $REMAINING" >> "$OUTPUT_FILE"
 echo "- Progress: $PROGRESS%" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-jq -r --arg m "$milestone" '
-.[] | select(.content.milestone.title==$m)
-| "- #(.content.number) - (.content.title)"
-' data.json >> "$OUTPUT_FILE"
+jq -r --arg m "$milestone" '.[] | select(.content.milestone.title==$m) | "- #(.content.number) - (.content.title)"' data.json >> "$OUTPUT_FILE"
 
 echo "" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
