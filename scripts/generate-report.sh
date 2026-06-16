@@ -13,7 +13,7 @@ echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 1. Extraire milestones
+# 1. milestones
 
 # -------------------------------
 
@@ -21,22 +21,18 @@ jq -r '
 .data.organization.projectV2.items.nodes[]
 | select(.content.milestone != null)
 | .content.milestone.title
-' data.json > milestones.txt
-
-sort milestones.txt | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones_filtered.txt
+' data.json | sort | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones.txt
 
 echo "## 🎯 Milestones suivies" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-while read m; do
-echo "- $m" >> "$OUTPUT_FILE"
-done < milestones_filtered.txt
+cat milestones.txt | sed 's/^/- /' >> "$OUTPUT_FILE"
 
 echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 2. Extraire issues (AVEC state)
+# 2. extraction JSON propre
 
 # -------------------------------
 
@@ -47,14 +43,14 @@ jq '
 | {
 number: .content.number,
 title: .content.title,
-state: .content.state,
+state: (.content.state // "OPEN"),
 milestone: .content.milestone.title
 }
 ' data.json > issues.json
 
 # -------------------------------
 
-# 3. Traitement par milestone
+# 3. traitement par milestone (SANS variable JSON)
 
 # -------------------------------
 
@@ -63,12 +59,14 @@ while read milestone; do
 echo "## 🗂 Milestone: $milestone" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-MATCHING=$(jq --arg m "$milestone" '
+TOTAL=$(jq --arg m "$milestone" '
 select(.milestone == $m)
-' issues.json)
+' issues.json | jq -s 'length')
 
-TOTAL=$(echo "$MATCHING" | jq -s 'length')
-DONE=$(echo "$MATCHING" | jq -s 'map(select(.state=="CLOSED")) | length')
+DONE=$(jq --arg m "$milestone" '
+select(.milestone == $m and .state=="CLOSED")
+' issues.json | jq -s 'length')
+
 REMAINING=$((TOTAL - DONE))
 
 if [ "$TOTAL" -gt 0 ]; then
@@ -83,12 +81,15 @@ echo "- Remaining: $REMAINING" >> "$OUTPUT_FILE"
 echo "- Progress: $PROGRESS%" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-echo "$MATCHING" | jq -r '"- #(.number) - (.title)"' >> "$OUTPUT_FILE"
+jq -r --arg m "$milestone" '
+select(.milestone == $m)
+| "- #(.number) - (.title)"
+' issues.json >> "$OUTPUT_FILE"
 
 echo "" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-done < milestones_filtered.txt
+done < milestones.txt
 
 # -------------------------------
 
