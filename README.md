@@ -1,10 +1,12 @@
 # 📊 Suivi développement AVENIR(s)
 
-## User Stories
+## 📅 Dernier reporting
 
-- 👉 [Latest report](./user-stories/latest.md)
+👉 [Latest report](./user-stories/latest.md)
 
-## Historique
+## 📚 Historique
 
-- [2026-06-17](./user-stories/2026-06-17.md)
-- [2026-06-16](./user-stories/2026-06-16.md)
+Les rapports sont générés automatiquement chaque nuit.
+
+Ils sont disponibles dans le dossier :
+- `user-stories/YYYY-MM-DD.md`

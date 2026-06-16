@@ -1,0 +1,54 @@
+name: Generate Milestone Report
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch GitHub project data
+        run: |
+          gh api graphql -f query='
+          query {
+            organization(login: "avenirs-esr") {
+              projectV2(number: 16) {
+                items(first: 100) {
+                  nodes {
+                    content {
+                      ... on Issue {
+                        number
+                        title
+                        milestone {
+                          title
+                          dueOn
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }' > data.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate report
+        run: |
+          chmod +x scripts/generate-report.sh
+          ./scripts/generate-report.sh
+
+      - name: Commit report
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git add user-stories/
+          git commit -m "Update report $(date +%F)" || echo "No changes"
+          git push
