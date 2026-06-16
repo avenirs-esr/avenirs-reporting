@@ -19,26 +19,38 @@ jobs:
       - name: Fetch GitHub project data
         run: |
           gh api graphql -f query='
-          query {
+            query {
             organization(login: "avenirs-esr") {
-              projectV2(number: 16) {
+                projectV2(number: 16) {
                 items(first: 100) {
-                  nodes {
+                    nodes {
                     content {
-                      ... on Issue {
+                        ... on Issue {
                         number
                         title
+                        state
+                        type
                         milestone {
-                          title
-                          dueOn
+                            title
                         }
-                      }
+                        }
                     }
-                  }
+                    fieldValues(first: 20) {
+                        nodes {
+                        ... on ProjectV2ItemFieldSingleSelectValue {
+                            name
+                            field {
+                            name
+                            }
+                        }
+                        }
+                    }
+                    }
                 }
-              }
+                }
             }
-          }' > data.json
+            }
+            ' > data.json
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
