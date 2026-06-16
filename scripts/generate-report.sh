@@ -17,11 +17,7 @@ echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-jq -r '.data.organization.projectV2.items.nodes[] | select(.content.milestone != null) | .content.milestone.title' data.json 
-| tr -d '\r' 
-| sed '/^\s*$/d' 
-| sort -u 
-| head -3 > milestones.txt
+jq -r '.data.organization.projectV2.items.nodes[] | select(.content.milestone != null) | .content.milestone.title' data.json | tr -d '\r' | sed '/^\s*$/d' | sort -u | head -3 > milestones.txt
 
 echo "## 🎯 Milestones suivies" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
