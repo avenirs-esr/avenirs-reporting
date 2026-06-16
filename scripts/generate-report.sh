@@ -11,32 +11,34 @@ mkdir -p "$OUTPUT_DIR"
 echo "# 📊 User Stories Report - $DATE" > "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-# 1. milestones (UNE SEULE LIGNE jq)
+# -------------------------------
 
-jq -r '.data.organization.projectV2.items.nodes[] | select(.content != null and .content.__typename=="Issue" and .content.milestone != null) | .content.milestone.title' data.json > milestones_raw.txt
+# 1. milestones
 
-sort milestones_raw.txt | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones.txt
+# -------------------------------
+
+jq -r '.[] | select(.content.milestone != null) | .content.milestone.title' data.json 
+| sort | uniq -c | sort -nr | head -3 | awk '{print $2}' > milestones.txt
 
 echo "## 🎯 Milestones suivies" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 sed 's/^/- /' milestones.txt >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-# 2. issues.json (UNE SEULE LIGNE jq)
+# -------------------------------
 
-jq '.data.organization.projectV2.items.nodes[0:5]' data.json
+# 2. traitement
 
-jq '[.data.organization.projectV2.items.nodes[] | select(.content != null and .content.__typename=="Issue" and .content.milestone != null) | {number: .content.number, title: .content.title, state: (.content.state // "OPEN"), milestone: .content.milestone.title}]' data.json > issues.json
-
-# 3. traitement
+# -------------------------------
 
 while read milestone; do
 
 echo "## 🗂 Milestone: $milestone" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-TOTAL=$(jq --arg m "$milestone" '.[] | select(.milestone==$m)' issues.json | jq -s 'length')
-DONE=$(jq --arg m "$milestone" '.[] | select(.milestone==$m and .state=="CLOSED")' issues.json | jq -s 'length')
+TOTAL=$(jq --arg m "$milestone" '.[] | select(.content.milestone.title==$m)' data.json | jq -s 'length')
+
+DONE=$(jq --arg m "$milestone" '.[] | select(.content.milestone.title==$m and .content.state=="CLOSED")' data.json | jq -s 'length')
 
 REMAINING=$((TOTAL - DONE))
 
@@ -52,7 +54,10 @@ echo "- Remaining: $REMAINING" >> "$OUTPUT_FILE"
 echo "- Progress: $PROGRESS%" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-jq -r --arg m "$milestone" '.[] | select(.milestone==$m) | "- #(.number) - (.title)"' issues.json >> "$OUTPUT_FILE"
+jq -r --arg m "$milestone" '
+.[] | select(.content.milestone.title==$m)
+| "- #(.content.number) - (.content.title)"
+' data.json >> "$OUTPUT_FILE"
 
 echo "" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
