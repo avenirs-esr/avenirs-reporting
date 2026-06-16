@@ -16,30 +16,27 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v5
 
-      - name: Fetch GitHub project data
-        run: |
-          gh api graphql -f query='
-            query {
-            organization(login: "avenirs-esr") {
+      - name: Setup GitHub CLI
+        uses: cli/cli@v3
+
+      - name: Auth gh
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
+      - name: Fetch GitHub project data 
+        run: | 
+            gh api graphql -f query='
+            query { 
+                organization(login: "avenirs-esr") { 
                 projectV2(number: 16) {
-                items(first: 100) {
+                    items(first: 100) {
                     nodes {
-                    content {
+                        content { 
                         ... on Issue {
-                        number
-                        title
-                        state
-                        milestone {
+                            number
                             title
-                        }
-                        }
-                    }
-                    fieldValues(first: 20) {
-                        nodes {
-                        ... on ProjectV2ItemFieldSingleSelectValue {
-                            name
-                            field {
-                            name
+                            state
+                            milestone {
+                            title
                             }
                         }
                         }
@@ -47,9 +44,7 @@ jobs:
                     }
                 }
                 }
-            }
-            }
-            ' > data.json
+            }' > data.json
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
