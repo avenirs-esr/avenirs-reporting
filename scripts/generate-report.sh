@@ -6,22 +6,24 @@ DATE=$(date +%F)
 OUTPUT_DIR="user-stories"
 OUTPUT_FILE="$OUTPUT_DIR/$DATE.md"
 
-mkdir -p $OUTPUT_DIR
+mkdir -p "$OUTPUT_DIR"
 
 echo "# 📊 User Stories Report - $DATE" > "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 1. Sélection des milestones
+# 1. Extraction milestones (SAFE)
 
 # -------------------------------
 
-FILTERED=$(jq -r '
+MILESTONES_RAW=$(jq -r '
 .data.organization.projectV2.items.nodes[]
 | select(.content.milestone != null)
 | .content.milestone.title
-' data.json 
+' data.json)
+
+FILTERED=$(echo "$MILESTONES_RAW" 
 | sort 
 | uniq -c 
 | sort -nr 
@@ -37,11 +39,11 @@ echo "" >> "$OUTPUT_FILE"
 
 # -------------------------------
 
-# 2. Extraction + calcul
+# 2. Extraction issues
 
 # -------------------------------
 
-jq --argjson milestones "$FILTERED" '
+ISSUES=$(jq --argjson milestones "$FILTERED" '
 .data.organization.projectV2.items.nodes[]
 | select(.content != null)
 | select(.content.milestone != null)
@@ -52,8 +54,15 @@ title: .content.title,
 state: (.content.state // "OPEN"),
 milestone: .content.milestone.title
 }
-' data.json 
-| jq -r -s '
+' data.json)
+
+# -------------------------------
+
+# 3. Agrégation
+
+# -------------------------------
+
+echo "$ISSUES" | jq -r -s '
 group_by(.milestone)
 | .[]
 | (
@@ -80,7 +89,7 @@ list: (map("- #" + (.number|tostring) + " - " + .title) | join("\n"))
 
 # -------------------------------
 
-# 3. latest
+# 4. latest
 
 # -------------------------------
 
