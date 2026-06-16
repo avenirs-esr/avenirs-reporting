@@ -14,6 +14,8 @@ echo "" >> "$OUTPUT_FILE"
 # Debug: afficher les types réellement présents
 
 echo "## Types détectés" >> "$OUTPUT_FILE"
+jq '.data.organization.projectV2.items.nodes[0].fieldValues.nodes' data.json
+
 jq -r '.data.organization.projectV2.items.nodes[] | .fieldValues.nodes[]? | select(.field.name=="Type") | .name' data.json | sort -u >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
