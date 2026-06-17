@@ -27,44 +27,13 @@ jobs:
 
       - name: Fetch GitHub project data 
         run: | 
-            gh api graphql -f query='
-                query {
-                organization(login: "avenirs-esr") {
-                    projectV2(number: 16) {
-                    items(first: 100) {
-                        nodes {
-                        id
-                        content {
-                            ... on Issue {
-                            number
-                            title
-                            state
-                            milestone {
-                                title
-                            }
-                            }
-                        }
-                        fieldValues(first: 50) {
-                            nodes {
-                            __typename
-                            ... on ProjectV2ItemFieldSingleSelectValue {
-                                name
-                                field {
-                                ... on ProjectV2SingleSelectField {
-                                    name
-                                }
-                                }
-                            }
-                            }
-                        }
-                        }
-                    }
-                    }
-                }
-                }
-                ' > data.json
+          ISSUES_JSON="$( gh api graphql --paginate \ -f owner="avenirs-esr" \ -f repo="avenirs-reporting" \ -f query=' query($owner: String!, $repo: String!, $endCursor: String) { repository(owner: $owner, name: $repo) { issues(first: 100, after: $endCursor, orderBy: {field: CREATED_AT, direction: ASC}) { nodes { number title url state issueType { name } milestone { title } } pageInfo { hasNextPage endCursor } } } }' \ | jq -s '[.[].data.repository.issues.nodes[]]' )" echo "$ISSUES_JSON" > issues.json
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Export issues JSON 
+        run: | 
+          echo "ISSUES_JSON=$(cat issues.json | jq -c .)" >> $GITHUB_ENV
 
       - name: Generate report
         run: |
