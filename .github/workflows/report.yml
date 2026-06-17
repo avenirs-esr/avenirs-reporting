@@ -20,7 +20,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ISSUES_JSON="$(
             gh api graphql --paginate \
               -f owner="avenirs-esr" \
               -f repo="AVENIRS-Project" \
@@ -54,28 +53,29 @@ jobs:
                     }
                   }
                 }' \
-            | jq -s '[.[].data.repository.issues.nodes[]]'
-          )"
-  
-          echo "$ISSUES_JSON" > issues.json
+            | jq -s '[.[].data.repository.issues.nodes[]]' > issues.json
   
       - name: Debug issues
         run: |
           echo "===== ISSUE COUNT ====="
           jq 'length' issues.json
     
-          echo "===== FIRST 10 ISSUES ====="
-          jq '.[0:10]' issues.json
-    
           echo "===== ISSUE TYPES ====="
           jq -r '.[].issueType.name' issues.json | sort -u
     
           echo "===== MILESTONES ====="
           jq -r '.[] | select(.milestone != null) | .milestone.title' issues.json | sort -u
-  
-      - name: Export issues JSON
+
+      - name: Debug counts
         run: |
-          echo "ISSUES_JSON=$(jq -c . issues.json)" >> "$GITHUB_ENV"
+          echo "Epics"
+          jq '[.[] | select(.issueType != null and .issueType.name=="Epic")] | length' issues.json
+      
+          echo "User Stories"
+          jq '[.[] | select(.issueType != null and .issueType.name=="User Story")] | length' issues.json
+      
+          echo "Bugs"
+          jq '[.[] | select(.issueType != null and .issueType.name=="Bug")] | length' issues.json
     
       - name: Generate report
         run: |
