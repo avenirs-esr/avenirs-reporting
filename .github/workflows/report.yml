@@ -23,7 +23,7 @@ jobs:
           ISSUES_JSON="$(
             gh api graphql --paginate \
               -f owner="avenirs-esr" \
-              -f repo="NOM_DU_REPO_METIER" \
+              -f repo="AVENIRS-Project" \
               -f query='
                 query($owner: String!, $repo: String!, $endCursor: String) {
                   repository(owner: $owner, name: $repo) {
