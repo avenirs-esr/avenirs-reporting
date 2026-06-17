@@ -94,6 +94,8 @@ jobs:
           git config user.email "actions@github.com"
 
           git status
+
+          git diff scripts/generate-report.sh
     
           git add user-stories/
     
