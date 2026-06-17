@@ -1,5 +1,5 @@
-# DEBUG REPORT - 2026-06-17
+# 📊 Product Report - 2026-06-17
 
-## Types détectés
+## 🎯 Milestones suivies
 
-## Sample issues
+
