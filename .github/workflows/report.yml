@@ -82,6 +82,11 @@ jobs:
           sed -i 's/\r$//' scripts/generate-report.sh
           chmod +x scripts/generate-report.sh
           ./scripts/generate-report.sh
+
+      - name: Cleanup
+        run: |
+          rm -f issues.json
+          rm -f milestones.txt
     
       - name: Commit report
         run: |
