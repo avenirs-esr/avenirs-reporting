@@ -92,6 +92,8 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
+
+          git status
     
           git add user-stories/
     
