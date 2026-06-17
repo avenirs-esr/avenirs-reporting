@@ -1,4 +1,4 @@
-name: Generate Milestone Report
+name: Generate Product Report
 
 permissions:
   contents: write
@@ -14,38 +14,85 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v5
-
-      - name: Auth gh
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
-
-      - name: Debug script content
-        run: |
-            echo "---- SCRIPT ----"
-            cat -n scripts/generate-report.sh
-            echo "---------------"
-
-      - name: Fetch GitHub project data 
-        run: | 
-          ISSUES_JSON="$( gh api graphql --paginate \ -f owner="avenirs-esr" \ -f repo="avenirs-reporting" \ -f query=' query($owner: String!, $repo: String!, $endCursor: String) { repository(owner: $owner, name: $repo) { issues(first: 100, after: $endCursor, orderBy: {field: CREATED_AT, direction: ASC}) { nodes { number title url state issueType { name } milestone { title } } pageInfo { hasNextPage endCursor } } } }' \ | jq -s '[.[].data.repository.issues.nodes[]]' )" echo "$ISSUES_JSON" > issues.json
+        uses: actions/checkout@v4
+  
+      - name: Fetch issues data
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Export issues JSON 
-        run: | 
-          echo "ISSUES_JSON=$(cat issues.json | jq -c .)" >> $GITHUB_ENV
-
+        run: |
+          ISSUES_JSON="$(
+            gh api graphql --paginate \
+              -f owner="avenirs-esr" \
+              -f repo="NOM_DU_REPO_METIER" \
+              -f query='
+                query($owner: String!, $repo: String!, $endCursor: String) {
+                  repository(owner: $owner, name: $repo) {
+                    issues(
+                      first: 100,
+                      after: $endCursor,
+                      orderBy: {
+                        field: CREATED_AT,
+                        direction: ASC
+                      }
+                    ) {
+                      nodes {
+                        number
+                        title
+                        url
+                        state
+                        issueType {
+                          name
+                        }
+                        milestone {
+                          title
+                        }
+                      }
+                      pageInfo {
+                        hasNextPage
+                        endCursor
+                      }
+                    }
+                  }
+                }' \
+            | jq -s '[.[].data.repository.issues.nodes[]]'
+          )"
+  
+          echo "$ISSUES_JSON" > issues.json
+  
+      - name: Debug issues
+        run: |
+          echo "===== ISSUE COUNT ====="
+          jq 'length' issues.json
+    
+          echo "===== FIRST 10 ISSUES ====="
+          jq '.[0:10]' issues.json
+    
+          echo "===== ISSUE TYPES ====="
+          jq -r '.[].issueType.name' issues.json | sort -u
+    
+          echo "===== MILESTONES ====="
+          jq -r '.[] | select(.milestone != null) | .milestone.title' issues.json | sort -u
+  
+      - name: Export issues JSON
+        run: |
+          echo "ISSUES_JSON=$(jq -c . issues.json)" >> "$GITHUB_ENV"
+    
       - name: Generate report
         run: |
           sed -i 's/\r$//' scripts/generate-report.sh
           chmod +x scripts/generate-report.sh
           ./scripts/generate-report.sh
-
+    
       - name: Commit report
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-
+    
           git add user-stories/
+    
           git commit -m "Update report $(date +%F)" || echo "No changes"
-          git push
+    
+          git pull --rebase origin main
+    
+          git push origin HEAD:main
+  
