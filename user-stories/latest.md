@@ -19,54 +19,55 @@
 
 ### 🐞 Qualité
 
-- Bugs : 158
 - Bugs ouverts : 4
+- Bugs fermés : 154
+- Bugs total : 158
 
 ### 🎯 Epics
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #3 - [EPIC][MVP] Gestion du profil
+- #4 - [EPIC][MVP] Gestion des compétences de la formation
+- #5 - [EPIC][MVP] Gestion des traces et des documents
+- #6 - [EPIC][MVP] Gestion des Activités
+- #8 - [EPIC][MVP] Réalisation de bilans
+- #9 - [EPIC][MVP] Edition et partage de synthèses
+- #38 - [EPIC][MVP] Construire son projet de vie
+- #43 - [EPIC][MVP] Gestion des cohortes
+- #67 - [EPIC][MVP] Eléments communs (plateforme)
+- #573 - [EPIC][MVP] Gestion des compétences déclarées
+- #574 - [EPIC][MVP] Gestion des formations
+- #584 - [EPIC][MVP] Gestion des expériences
+- #1855 - [EPIC][MVP] Gestion des feedback
 
 ### ⏳ Fonctionnels restants (20 premiers)
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #13 - Ajouter une trace
+- #15 - Modifier une trace
+- #17 - Supprimer une compétence déclarée
+- #37 - Traduire mon portfolio dans une autre langue
+- #39 - Consulter le détail d'une compétence visée par ma formation
+- #40 - Consulter le détail de la trace
+- #61 - Ajouter une compétence complémentaire
+- #62 - Ajouter une expérience déclarée
+- #81 - Consulter mes dernières formations
+- #82 - Consulter mes dernières expériences
+- #83 - Consulter la liste exhaustive des compétences visées par mes formations actuelles et passées
+- #88 - Personnaliser ma page d'accueil
+- #96 - Modifier mon profil
+- #121 - Modifier mon profil
+- #149 - Filtrer mes traces associées
+- #156 - Trier mes compétences 
+- #212 - Associer une trace à un niveau de compétence depuis la bibliothèque de traces
+- #220 - Me connecter à mon Cofolio
+- #221 - Créer mon compte Cofolio
+- #223 - Consulter la liste exhaustive de mes traces associées
 
 ### 🐞 Bugs ouverts
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #1823 - [Bug]: <affichage incomplet sur mobile>
+- #1829 - [Bug]: <enregistrement impossible>
+- #1830 - [Bug]: <pas de champ "expérience" dans le menu Associer..>
+- #1833 - [Bug]: impossible de supprimer competence associée
 
 ---
 
@@ -80,47 +81,48 @@
 
 ### 🐞 Qualité
 
-- Bugs : 3
 - Bugs ouverts : 0
+- Bugs fermés : 3
+- Bugs total : 3
 
 ### 🎯 Epics
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #1350 - [EPIC][V1] Gestion des kits
+- #1856 - [EPIC][V1] Gestion des Activités
+- #1865 - [EPIC][V1] Construire son projet de vie
+- #1866 - [EPIC][V1] Edition et partage de synthèses
+- #1867 - [EPIC][V1] Eléments communs (plateforme)
+- #1868 - [EPIC][V1] Gestion des compétences déclarées
+- #1869 - [EPIC][V1] Gestion des compétences de la formation
+- #1870 - [EPIC][V1] Gestion des expériences
+- #1871 - [EPIC][V1] Gestion des feedback
+- #1872 - [EPIC][V1] Gestion des formations
+- #1873 - [EPIC][V1] Gestion des traces et des documents
+- #1874 - [EPIC][V1] Gestion du profil
+- #1875 - [EPIC][V1] Réalisation de bilans
 
 ### ⏳ Fonctionnels restants (20 premiers)
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #12 - Ajouter une compétence établissement
+- #85 - Consulter la frise chronologique synthèse de mon parcours
+- #555 - Valoriser un élément sur le CV
+- #644 - Associer une compétence déclarées à une formation déclarée
+- #1077 - Associer une compétence déclarée à une expérience déclarée depuis le détail d'une compétence déclarée
+- #1079 - Supprimer une ou plusieurs traces ou expériences déclarées associées à une compétence déclarée
+- #1087 - Télécharger un document joint à une formation déclarée
+- #1189 - Consulter l’historique des traces (v1 back-office)
+- #1245 - Paramétrer le caractère obligatoire d’une activité nationale
+- #1247 - Donner les droits de modification de l’activité nationale à un tiers
+- #1258 - Supprimer une trace d'un kit depuis le détail d'une trace
+- #1301 - Exporter mon kit
+- #1302 - Supprimer la valorisation d’un élément (PDV) dans un kit
+- #1303 - Valoriser une trace dans un kit depuis le détail d'une trace
+- #1304 - Consulter le contenu textuel composant le kit
+- #1305 - Consulter la page Mon "kit prêt à l'emploi"
+- #1306 - Valoriser un élément textuel (PDV) dans un kit
+- #1307 - Valoriser / dévaloriser une compétence déclarée dans le kit depuis le détail d’une compétence déclarée
+- #1308 - Valoriser / dévaloriser une expérience déclarée professionnelle dans le kit depuis le détail d’une expérience déclarée professionnelle
+- #1309 - Consulter le contenu multimédia composant le kit
 
 ### 🐞 Bugs ouverts
 
@@ -137,48 +139,49 @@
 
 ### 🐞 Qualité
 
-- Bugs : 0
 - Bugs ouverts : 0
+- Bugs fermés : 0
+- Bugs total : 0
 
 ### 🎯 Epics
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #7 - [EPIC][V2] Gestion des pages libres
+- #42 - [EPIC][V2] Gestion des évaluations
+- #1857 - [EPIC][V2] Gestion des Activités
+- #1876 - [EPIC][V2] Construire son projet de vie
+- #1877 - [EPIC][V2] Edition et partage de synthèses
+- #1878 - [EPIC][V2] Eléments communs (plateforme)
+- #1879 - [EPIC][V2] Gestion des compétences déclarées
+- #1880 - [EPIC][V2] Gestion des compétences de la formation
+- #1881 - [EPIC][V2] Gestion des expériences
+- #1882 - [EPIC][V2] Gestion des feedback
+- #1883 - [EPIC][V2] Gestion des formations
+- #1884 - [EPIC][V2] Gestion des traces et des documents
+- #1885 - [EPIC][V2] Gestion du profil
+- #1886 - [EPIC][V2] Réalisation de bilans
 
 ### ⏳ Fonctionnels restants (20 premiers)
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #64 - Filtrer mes compétences complémentaires
+- #150 - Trier mes traces associées
+- #157 - Rechercher une compétence
+- #160 - Rechercher une AMS
+- #177 - Trier mes compétences complémentaires
+- #178 - Rechercher une compétence complémentaire
+- #300 - Trier mes traces non associées
+- #357 - Consulter les compétences visées dans le cadre d'une AMS
+- #361 - Télécharger le contenu de son AMS
+- #396 - Consulter le statut d'un niveau de compétence terminé depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
+- #397 - Consulter le nombre de traces associées à un niveau de compétence depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
+- #399 - Consulter le nombre total de niveaux de compétence depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
+- #498 - Consulter les associations d'une AMS depuis la page d'un niveau de compétence
+- #622 - Ajouter une page libre
+- #626 - Supprimer une page libre
+- #701 - Accéder à la messagerie contextualisée
+- #749 - Télécharger un document joint
+- #961 - Consulter le détail d'une sous activité dans "Mes activités" de "Construire mon projet de vie"
+- #963 - Télécharger mon activité dans "Construire mon projet de vie"
+- #974 - Gérer une sous activité dans "Construire mon projet de vie"
 
 ### 🐞 Bugs ouverts
 
@@ -195,40 +198,41 @@
 
 ### 🐞 Qualité
 
-- Bugs : 0
 - Bugs ouverts : 0
+- Bugs fermés : 0
+- Bugs total : 0
 
 ### 🎯 Epics
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #10 - [EPIC][V3] Connexion vers autres services
+- #44 - [EPIC][V3] Gestion des formations
+- #786 - [EPIC][V3] Paramétrage des AMS
+- #1858 - [EPIC][V3] Gestion des Activités
+- #1888 - [EPIC][V3] Construire son projet de vie
+- #1889 - [EPIC][V3] Edition et partage de synthèses
+- #1890 - [EPIC][V3] Eléments communs (plateforme)
+- #1891 - [EPIC][V3] Gestion des compétences déclarées
+- #1892 - [EPIC][V3] Gestion des compétences de la formation
+- #1893 - [EPIC][V3] Gestion des expériences
+- #1894 - [EPIC][V3] Gestion des feedback
+- #1895 - [EPIC][V3] Gestion des traces et des documents
+- #1896 - [EPIC][V3] Gestion du profil
+- #1897 - [EPIC][V3] Réalisation de bilans
 
 ### ⏳ Fonctionnels restants (20 premiers)
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #49 - Paramétrer une AMS de type SAé Guidée ou semi-guidée
+- #76 - Consulter le détail d’une activité dans une AMS
+- #77 - Paramétrer une AMS : découper une AMS
+- #80 - Paramétrer une AMS : Définir les grilles d'évaluation [A finaliser]
+- #195 - Ajouter une trace depuis une page niveau de compétence
+- #196 - Ajouter une trace depuis la page activité d’une AMS
+- #202 - Consulter le déroulé des activités d'une AMS
+- #203 - Consulter les éléments associés à l’activité d’une AMS
+- #364 - Consulter le déroulé des activités depuis la page détail d'une AMS
+- #387 - Consulter le détail d'une compétence visées par une formation passée
+- #398 - Consulter le nombre d'AMS associées à un niveau de compétence depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
+- #850 - Consulter la liste exhaustive de mes formations vérifiées
 
 ### 🐞 Bugs ouverts
 
@@ -245,23 +249,24 @@
 
 ### 🐞 Qualité
 
-- Bugs : 0
 - Bugs ouverts : 0
+- Bugs fermés : 0
+- Bugs total : 0
 
 ### 🎯 Epics
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #1898 - [EPIC][V4] Construire son projet de vie
+- #1899 - [EPIC][V4] Edition et partage de synthèses
+- #1900 - [EPIC][V4] Eléments communs (plateforme)
+- #1901 - [EPIC][V4] Gestion des Activités
+- #1902 - [EPIC][V4] Gestion des compétences déclarées
+- #1903 - [EPIC][V4] Gestion des compétences de la formation
+- #1904 - [EPIC][V4] Gestion des expériences
+- #1905 - [EPIC][V4] Gestion des feedback
+- #1906 - [EPIC][V4] Gestion des formations
+- #1907 - [EPIC][V4] Gestion des traces et des documents
+- #1908 - [EPIC][V4] Gestion du profil
+- #1909 - [EPIC][V4] Réalisation de bilans
 
 ### ⏳ Fonctionnels restants (20 premiers)
 
@@ -281,23 +286,24 @@
 
 ### 🐞 Qualité
 
-- Bugs : 0
 - Bugs ouverts : 0
+- Bugs fermés : 0
+- Bugs total : 0
 
 ### 🎯 Epics
 
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
-- #(.number) - (.title)
+- #1910 - [EPIC][V5] Construire son projet de vie
+- #1911 - [EPIC][V5] Edition et partage de synthèses
+- #1912 - [EPIC][V5] Eléments communs (plateforme)
+- #1913 - [EPIC][V5] Gestion des Activités
+- #1914 - [EPIC][V5] Gestion des compétences déclarées
+- #1915 - [EPIC][V5] Gestion des compétences de la formation
+- #1916 - [EPIC][V5] Gestion des expériences
+- #1917 - [EPIC][V5] Gestion des feedback
+- #1918 - [EPIC][V5] Gestion des formations
+- #1919 - [EPIC][V5] Gestion des traces et des documents
+- #1920 - [EPIC][V5] Gestion du profil
+- #1921 - [EPIC][V5] Réalisation de bilans
 
 ### ⏳ Fonctionnels restants (20 premiers)
 
