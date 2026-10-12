@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-10-11
+# 📊 Product Report - 2026-10-12
 
 ## 🎯 Milestones suivies
 
@@ -13,8 +13,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 154 / 195 (78%)
-- Restants : 41
+- Fonctionnels : 154 / 194 (79%)
+- Restants : 40
 - Epics : 14
 
 ### 🐞 Qualité
@@ -60,8 +60,8 @@
 - #1253 - Ajouter une activité nationale
 - #1423 - Accessibilité - Garantir l'exploitabilité du MVP par tous les utilisateurs
 - #1512 - Publier une activité
-- #1615 - [Evol]: Le poids de la pièce n'est pas visible
 - #1646 - Supprimer un/des document(s) ou lien(s) d'une activité publiée ou non publiée
+- #1652 - Être notifié en cas de demande de feedback
 
 ### 🐞 Bugs ouverts
 
@@ -133,8 +133,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 0 / 100 (0%)
-- Restants : 100
+- Fonctionnels : 0 / 101 (0%)
+- Restants : 101
 - Epics : 16
 
 ### 🐞 Qualité
