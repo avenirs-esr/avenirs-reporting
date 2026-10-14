@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-10-13
+# 📊 Product Report - 2026-10-14
 
 ## 🎯 Milestones suivies
 
@@ -133,8 +133,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 1 / 105 (0%)
-- Restants : 104
+- Fonctionnels : 1 / 113 (0%)
+- Restants : 112
 - Epics : 16
 
 ### 🐞 Qualité
@@ -194,8 +194,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 2 / 31 (6%)
-- Restants : 29
+- Fonctionnels : 2 / 34 (5%)
+- Restants : 32
 - Epics : 14
 
 ### 🐞 Qualité
@@ -239,10 +239,10 @@
 - #657 - Choisir un template de pages libres dans une liste exhaustive
 - #1017 - Accéder à un document joint transformé en trace depuis une trace
 - #1312 - Consulter le détail d'une page libre
-- #2052 - Gérer les associations d'une page libre
-- #2822 - [EVOL #2821] Gérer les droits d’administration sur les établissements secondaires et les formations
-- #2825 - Rechercher une page libre
-- #2837 - Télécharger une page libre
+- #1322 - Créer la carte mentale
+- #1323 - Ajouter un élément à la carte mentale
+- #1324 - Supprimer un élément de la carte mentale
+- #1325 - Exporter la carte mentale
 
 ### 🐞 Bugs ouverts
 
