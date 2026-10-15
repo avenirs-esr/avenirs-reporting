@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-10-14
+# 📊 Product Report - 2026-10-15
 
 ## 🎯 Milestones suivies
 
@@ -73,8 +73,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 56 / 124 (45%)
-- Restants : 68
+- Fonctionnels : 60 / 124 (48%)
+- Restants : 64
 - Epics : 15
 
 ### 🐞 Qualité
@@ -108,8 +108,6 @@
 - #555 - Valoriser un élément sur le CV
 - #643 - Associer une expérience déclarée à une formation déclarée
 - #1087 - Télécharger un document joint à une formation déclarée
-- #1183 - Consulter les CGU
-- #1184 - Accepter les CGU
 - #1308 - Valoriser / dévaloriser une expérience déclarée professionnelle dans le kit depuis le détail d’une expérience déclarée professionnelle
 - #1310 - Valoriser / dévaloriser une formation déclarée dans le kit depuis le détail d’une formation déclarée
 - #1314 - Valoriser / dévaloriser une expérience déclarée personnelle dans le kit depuis le détail d’une expérience déclarée personnelle
@@ -123,6 +121,8 @@
 - #2109 - [TECH] Publication activité nationale
 - #2115 - 1- [BACK] Alimentation et gestion établissement principal
 - #2116 - 2- [BACK] Alimentation et gestion établissement secondaire
+- #2117 - 3- [BACK] Alimentation et gestion des groupes
+- #2136 - Télécharger les documents joints à un feedback reçu pour l'apprenant
 
 ### 🐞 Bugs ouverts
 
@@ -133,8 +133,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 1 / 113 (0%)
-- Restants : 112
+- Fonctionnels : 1 / 117 (0%)
+- Restants : 116
 - Epics : 16
 
 ### 🐞 Qualité
