@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-10-15
+# 📊 Product Report - 2026-10-16
 
 ## 🎯 Milestones suivies
 
@@ -73,8 +73,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 60 / 124 (48%)
-- Restants : 64
+- Fonctionnels : 62 / 124 (50%)
+- Restants : 62
 - Epics : 15
 
 ### 🐞 Qualité
@@ -106,7 +106,6 @@
 - #12 - Ajouter une compétence établissement
 - #85 - Consulter la frise chronologique synthèse de mon parcours
 - #555 - Valoriser un élément sur le CV
-- #643 - Associer une expérience déclarée à une formation déclarée
 - #1087 - Télécharger un document joint à une formation déclarée
 - #1308 - Valoriser / dévaloriser une expérience déclarée professionnelle dans le kit depuis le détail d’une expérience déclarée professionnelle
 - #1310 - Valoriser / dévaloriser une formation déclarée dans le kit depuis le détail d’une formation déclarée
@@ -123,6 +122,7 @@
 - #2116 - 2- [BACK] Alimentation et gestion établissement secondaire
 - #2117 - 3- [BACK] Alimentation et gestion des groupes
 - #2136 - Télécharger les documents joints à un feedback reçu pour l'apprenant
+- #2208 - [EVOL #1179] Supprimer une ou plusieurs associations de traces à une compétence déclarée
 
 ### 🐞 Bugs ouverts
 
@@ -133,8 +133,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 1 / 117 (0%)
-- Restants : 116
+- Fonctionnels : 1 / 119 (0%)
+- Restants : 118
 - Epics : 16
 
 ### 🐞 Qualité
