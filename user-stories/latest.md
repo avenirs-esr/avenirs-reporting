@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-10-16
+# 📊 Product Report - 2026-10-17
 
 ## 🎯 Milestones suivies
 
@@ -133,8 +133,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 1 / 119 (0%)
-- Restants : 118
+- Fonctionnels : 1 / 128 (0%)
+- Restants : 127
 - Epics : 16
 
 ### 🐞 Qualité
@@ -181,9 +181,9 @@
 - #701 - Accéder à la messagerie contextualisée
 - #749 - Télécharger un document joint
 - #850 - Consulter la liste exhaustive de mes formations vérifiées
+- #921 - Consulter le détail d’une fiche futur possible "métier"
+- #953 - Modifier ma collecte d'informations d'une fiche futur possible "métier"
 - #961 - Consulter le détail d'une sous activité dans "Mes activités" de "Construire mon projet de vie"
-- #962 - Rechercher, filtrer et trier "Ma bibliothèque d'activités"
-- #963 - Télécharger mon activité dans "Construire mon projet de vie"
 
 ### 🐞 Bugs ouverts
 
