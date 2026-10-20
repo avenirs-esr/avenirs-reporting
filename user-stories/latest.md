@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-10-19
+# 📊 Product Report - 2026-10-20
 
 ## 🎯 Milestones suivies
 
@@ -13,8 +13,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 154 / 194 (79%)
-- Restants : 40
+- Fonctionnels : 154 / 193 (79%)
+- Restants : 39
 - Epics : 14
 
 ### 🐞 Qualité
@@ -54,7 +54,6 @@
 - #1082 - Associer une trace à une expérience déclarée depuis le détail d'une trace
 - #1100 - Associer une compétence déclarée depuis le détail de son activité
 - #1101 - Supprimer une ou plusieurs association(s) depuis le détail d'une activité de "Construire mon projet de vie"
-- #1147 - Renseigner le déroulé d’une activité nationale
 - #1154 - Associer une compétence déclarée à une trace depuis le détail d'une trace
 - #1156 - Associer un élément à une trace lors de son ajout
 - #1253 - Ajouter une activité nationale
@@ -62,6 +61,7 @@
 - #1512 - Publier une activité
 - #1646 - Supprimer un/des document(s) ou lien(s) d'une activité publiée ou non publiée
 - #1652 - Être notifié en cas de demande de feedback
+- #1654 - Envoyer un feedback
 
 ### 🐞 Bugs ouverts
 
@@ -133,8 +133,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 1 / 128 (0%)
-- Restants : 127
+- Fonctionnels : 1 / 132 (0%)
+- Restants : 131
 - Epics : 16
 
 ### 🐞 Qualité
