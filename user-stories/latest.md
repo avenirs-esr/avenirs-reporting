@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-10-20
+# 📊 Product Report - 2026-10-21
 
 ## 🎯 Milestones suivies
 
@@ -183,7 +183,7 @@
 - #850 - Consulter la liste exhaustive de mes formations vérifiées
 - #921 - Consulter le détail d’une fiche futur possible "métier"
 - #953 - Modifier ma collecte d'informations d'une fiche futur possible "métier"
-- #961 - Consulter le détail d'une sous activité dans "Mes activités" de "Construire mon projet de vie"
+- #961 - Consulter le détail d'une sous-activité dans "Mes activités"
 
 ### 🐞 Bugs ouverts
 
