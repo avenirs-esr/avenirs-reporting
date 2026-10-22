@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-10-21
+# 📊 Product Report - 2026-10-22
 
 ## 🎯 Milestones suivies
 
@@ -133,8 +133,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 1 / 132 (0%)
-- Restants : 131
+- Fonctionnels : 1 / 136 (0%)
+- Restants : 135
 - Epics : 16
 
 ### 🐞 Qualité
@@ -181,9 +181,9 @@
 - #701 - Accéder à la messagerie contextualisée
 - #749 - Télécharger un document joint
 - #850 - Consulter la liste exhaustive de mes formations vérifiées
+- #899 - [EVOL #1012] Supprimer une ou plusieurs fiches futur possible depuis la liste exhaustive
 - #921 - Consulter le détail d’une fiche futur possible "métier"
 - #953 - Modifier ma collecte d'informations d'une fiche futur possible "métier"
-- #961 - Consulter le détail d'une sous-activité dans "Mes activités"
 
 ### 🐞 Bugs ouverts
 
