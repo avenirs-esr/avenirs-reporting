@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-10-26
+# 📊 Product Report - 2026-10-27
 
 ## 🎯 Milestones suivies
 
@@ -133,8 +133,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 1 / 147 (0%)
-- Restants : 146
+- Fonctionnels : 1 / 145 (0%)
+- Restants : 144
 - Epics : 16
 
 ### 🐞 Qualité
@@ -178,12 +178,12 @@
 - #397 - Consulter le nombre de traces associées à un niveau de compétence depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
 - #399 - Consulter le nombre total de niveaux de compétence depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
 - #498 - Consulter les associations d'une AMS depuis la page d'un niveau de compétence
-- #701 - Accéder à la messagerie contextualisée
 - #749 - Télécharger un document joint
 - #850 - Consulter la liste exhaustive de mes formations vérifiées
 - #890 - Consulter la liste de mes fiches futur
 - #891 - Filtrer et trier mes fiches futur
 - #892 - Rechercher une fiche futur possible
+- #893 - Ajouter une fiche futur possible
 
 ### 🐞 Bugs ouverts
 
@@ -194,8 +194,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 2 / 34 (5%)
-- Restants : 32
+- Fonctionnels : 2 / 44 (4%)
+- Restants : 42
 - Epics : 14
 
 ### 🐞 Qualité
@@ -237,12 +237,12 @@
 - #640 - Consulter la liste exhaustive de mes pages libres
 - #656 - Créer et mettre à disposition un template de page libre
 - #657 - Choisir un template de pages libres dans une liste exhaustive
+- #701 - Accéder à la messagerie contextualisée
 - #1017 - Accéder à un document joint transformé en trace depuis une trace
+- #1245 - Paramétrer le caractère obligatoire d’une activité
 - #1312 - Consulter le détail d'une page libre
-- #1322 - Créer la carte mentale
-- #1323 - Ajouter un élément à la carte mentale
-- #1324 - Supprimer un élément de la carte mentale
-- #1325 - Exporter la carte mentale
+- #1320 - Restaurer une version d'une trace
+- #1321 - Visualiser sous forme de carte mentale les éléments PDV
 
 ### 🐞 Bugs ouverts
 
