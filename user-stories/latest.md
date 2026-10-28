@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-10-27
+# 📊 Product Report - 2026-10-28
 
 ## 🎯 Milestones suivies
 
@@ -73,8 +73,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 62 / 124 (50%)
-- Restants : 62
+- Fonctionnels : 66 / 123 (53%)
+- Restants : 57
 - Epics : 15
 
 ### 🐞 Qualité
@@ -106,7 +106,6 @@
 - #12 - Ajouter une compétence établissement
 - #85 - Consulter la frise chronologique synthèse de mon parcours
 - #555 - Valoriser un élément sur le CV
-- #1087 - Télécharger un document joint à une formation déclarée
 - #1308 - Valoriser / dévaloriser une expérience déclarée professionnelle dans le kit depuis le détail d’une expérience déclarée professionnelle
 - #1310 - Valoriser / dévaloriser une formation déclarée dans le kit depuis le détail d’une formation déclarée
 - #1314 - Valoriser / dévaloriser une expérience déclarée personnelle dans le kit depuis le détail d’une expérience déclarée personnelle
@@ -123,6 +122,7 @@
 - #2117 - 3- [BACK] Alimentation et gestion des groupes
 - #2136 - Télécharger les documents joints à un feedback reçu pour l'apprenant
 - #2208 - [EVOL #1179] Supprimer une ou plusieurs associations de traces à une compétence déclarée
+- #2216 - [EVOL] Conserver le contexte du kit lors de la consultation du détail d’une trace
 
 ### 🐞 Bugs ouverts
 
@@ -133,8 +133,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 1 / 145 (0%)
-- Restants : 144
+- Fonctionnels : 1 / 131 (0%)
+- Restants : 130
 - Epics : 16
 
 ### 🐞 Qualité
@@ -167,23 +167,23 @@
 - #64 - Filtrer mes compétences complémentaires
 - #150 - Trier mes traces associées
 - #157 - Rechercher une compétence
-- #160 - Rechercher une AMS
 - #177 - Trier mes compétences complémentaires
 - #178 - Rechercher une compétence complémentaire
 - #300 - Trier mes traces non associées
 - #301 - [TECH] Accéder aux fonctionnalités d'administration depuis l'univers Enseignant
-- #357 - Consulter les compétences visées dans le cadre d'une AMS
-- #361 - Télécharger le contenu de son AMS
 - #396 - Consulter le statut d'un niveau de compétence terminé depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
 - #397 - Consulter le nombre de traces associées à un niveau de compétence depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
 - #399 - Consulter le nombre total de niveaux de compétence depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
-- #498 - Consulter les associations d'une AMS depuis la page d'un niveau de compétence
-- #749 - Télécharger un document joint
 - #850 - Consulter la liste exhaustive de mes formations vérifiées
 - #890 - Consulter la liste de mes fiches futur
 - #891 - Filtrer et trier mes fiches futur
 - #892 - Rechercher une fiche futur possible
 - #893 - Ajouter une fiche futur possible
+- #899 - [EVOL #1012] Supprimer une ou plusieurs fiches futur possible depuis "Mes fiches futur"
+- #900 - Ajouter une ou plusieurs rubriques dans une fiche futur possible
+- #901 - Supprimer une ou plusieurs rubriques d’une fiche futur possible
+- #921 - Consulter le détail d’une fiche futur possible
+- #933 - Gérer les associations d'une fiche futur possible
 
 ### 🐞 Bugs ouverts
 
@@ -194,8 +194,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 2 / 44 (4%)
-- Restants : 42
+- Fonctionnels : 2 / 56 (3%)
+- Restants : 54
 - Epics : 14
 
 ### 🐞 Qualité
@@ -224,12 +224,16 @@
 ### ⏳ Fonctionnels restants (20 premiers)
 
 - #49 - Paramétrer une AMS de type SAé Guidée ou semi-guidée
+- #160 - Rechercher une AMS
 - #195 - Ajouter une trace depuis une page niveau de compétence
 - #203 - Consulter les éléments associés à l’activité d’une AMS
 - #251 - Consulter les statuts d'une compétence visée par ma ou mes formation(s)
+- #357 - Consulter les compétences visées dans le cadre d'une AMS
+- #361 - Télécharger le contenu de son AMS
 - #364 - Consulter le déroulé des activités depuis la page détail d'une AMS
 - #387 - Consulter le détail d'une compétence visées par une formation passée
 - #426 - Choisir le nombre de compétences APC affichées par page
+- #498 - Consulter les associations d'une AMS depuis la page d'un niveau de compétence
 - #622 - Ajouter une page libre
 - #623 - Créer une page libre vierge par l'apprenant
 - #626 - Supprimer une page libre
@@ -239,10 +243,6 @@
 - #657 - Choisir un template de pages libres dans une liste exhaustive
 - #701 - Accéder à la messagerie contextualisée
 - #1017 - Accéder à un document joint transformé en trace depuis une trace
-- #1245 - Paramétrer le caractère obligatoire d’une activité
-- #1312 - Consulter le détail d'une page libre
-- #1320 - Restaurer une version d'une trace
-- #1321 - Visualiser sous forme de carte mentale les éléments PDV
 
 ### 🐞 Bugs ouverts
 
