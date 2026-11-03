@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-02
+# 📊 Product Report - 2026-11-03
 
 ## 🎯 Milestones suivies
 
@@ -13,8 +13,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 154 / 193 (79%)
-- Restants : 39
+- Fonctionnels : 154 / 194 (79%)
+- Restants : 40
 - Epics : 14
 
 ### 🐞 Qualité
@@ -73,8 +73,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 71 / 123 (57%)
-- Restants : 52
+- Fonctionnels : 74 / 122 (60%)
+- Restants : 48
 - Epics : 15
 
 ### 🐞 Qualité
@@ -110,7 +110,6 @@
 - #1310 - Valoriser / dévaloriser une formation déclarée dans le kit depuis le détail d’une formation déclarée
 - #1314 - Valoriser / dévaloriser une expérience déclarée personnelle dans le kit depuis le détail d’une expérience déclarée personnelle
 - #1436 - Préparer la connexion à Cofolio
-- #1531 - Consulter le nombre d'inactifs depuis 30 jours sur une activité
 - #1940 - [EVOL #1155] Ajouter les expériences déclarées aux éléments associés à une trace
 - #2034 - [REFACTO] Uniformiser la taille des boutons
 - #2098 - 4- [TECH] Structurer le ciblage des apprenants à partir des établissements et des groupes
@@ -123,6 +122,7 @@
 - #2136 - Télécharger les documents joints à un feedback reçu pour l'apprenant
 - #2208 - [EVOL #1179] Supprimer une ou plusieurs associations de traces à une compétence déclarée
 - #2216 - [EVOL] Conserver le contexte du kit lors de la consultation du détail d’une trace
+- #2217 - [EVOL #1966] Reprendre le brouillon existant lors de la modification d’une activité dépubliée
 
 ### 🐞 Bugs ouverts
 
@@ -133,8 +133,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 2 / 131 (1%)
-- Restants : 129
+- Fonctionnels : 2 / 129 (1%)
+- Restants : 127
 - Epics : 16
 
 ### 🐞 Qualité
@@ -174,7 +174,6 @@
 - #396 - Consulter le statut d'un niveau de compétence terminé depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
 - #397 - Consulter le nombre de traces associées à un niveau de compétence depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
 - #399 - Consulter le nombre total de niveaux de compétence depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
-- #850 - Consulter la liste exhaustive de mes formations vérifiées
 - #890 - Consulter la liste de mes fiches futur
 - #891 - Filtrer et trier mes fiches futur
 - #892 - Rechercher une fiche futur possible
@@ -184,6 +183,7 @@
 - #901 - Supprimer une ou plusieurs rubriques d’une fiche futur possible
 - #921 - Consulter le détail d’une fiche futur possible
 - #933 - Gérer les associations d'une fiche futur possible
+- #950 - Modifier une fiche "futur possible"
 
 ### 🐞 Bugs ouverts
 
@@ -194,8 +194,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 2 / 57 (3%)
-- Restants : 55
+- Fonctionnels : 2 / 58 (3%)
+- Restants : 56
 - Epics : 14
 
 ### 🐞 Qualité
@@ -223,6 +223,7 @@
 
 ### ⏳ Fonctionnels restants (20 premiers)
 
+- #41 - Consulter le détail d'une AMS
 - #49 - Paramétrer une AMS de type SAé Guidée ou semi-guidée
 - #160 - Rechercher une AMS
 - #195 - Ajouter une trace depuis une page niveau de compétence
@@ -242,7 +243,6 @@
 - #656 - Créer et mettre à disposition un template de page libre
 - #657 - Choisir un template de pages libres dans une liste exhaustive
 - #701 - Accéder à la messagerie contextualisée
-- #1017 - Accéder à un document joint transformé en trace depuis une trace
 
 ### 🐞 Bugs ouverts
 
