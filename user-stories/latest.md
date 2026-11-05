@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-04
+# 📊 Product Report - 2026-11-05
 
 ## 🎯 Milestones suivies
 
@@ -13,8 +13,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 154 / 194 (79%)
-- Restants : 40
+- Fonctionnels : 177 / 194 (91%)
+- Restants : 17
 - Epics : 14
 
 ### 🐞 Qualité
@@ -42,26 +42,23 @@
 
 ### ⏳ Fonctionnels restants (20 premiers)
 
-- #13 - Ajouter une trace
-- #39 - Consulter le détail d'une compétence visée par ma formation
-- #62 - Ajouter une expérience déclarée
-- #83 - Consulter la liste exhaustive des compétences visées par mes formations actuelles et passées
 - #123 - Modifier ma photo de couverture
-- #875 - [ENABLER] Authentification locale CAS
 - #973 - Se désinscrire d'une activité dans "Construire mon projet de vie"
 - #1062 - Terminer une activité dans "Construire mon projet de vie'
-- #1074 - Préparer la déconnexion de cofolio
 - #1082 - Associer une trace à une expérience déclarée depuis le détail d'une trace
 - #1100 - Associer une compétence déclarée depuis le détail de son activité
 - #1101 - Supprimer une ou plusieurs association(s) depuis le détail d'une activité de "Construire mon projet de vie"
-- #1154 - Associer une compétence déclarée à une trace depuis le détail d'une trace
-- #1156 - Associer un élément à une trace lors de son ajout
-- #1253 - Ajouter une activité nationale
 - #1423 - Accessibilité - Garantir l'exploitabilité du MVP par tous les utilisateurs
-- #1512 - Publier une activité
-- #1646 - Supprimer un/des document(s) ou lien(s) d'une activité publiée ou non publiée
-- #1652 - Être notifié en cas de demande de feedback
-- #1654 - Envoyer un feedback
+- #1672 - Consulter l'historique des feedbacks
+- #1676 - Mettre à jour une demande de feedback dans une activité de "Construire son projet de vie"
+- #1677 - Mettre à jour un feedback
+- #1846 - Modifier une activité publiée (avec inscrits)
+- #1966 - Dépublier une activité publiée
+- #1985 - Modifier une activité publiée (sans apprenant inscrit)
+- #2046 - [EVOL #1648 #1649 #1650] Consulter et filtrer toutes mes demandes de feedback par activité
+- #2053 - Suppression totale du contenu d'une activité pour un apprenant
+- #2142 - [EVOL 960] Consulter et personnaliser la période optionnelle dans une activité
+- #3114 - [US] Audit accessibilité
 
 ### 🐞 Bugs ouverts
 
@@ -73,8 +70,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 74 / 122 (60%)
-- Restants : 48
+- Fonctionnels : 83 / 122 (68%)
+- Restants : 39
 - Epics : 15
 
 ### 🐞 Qualité
@@ -110,10 +107,8 @@
 - #1310 - Valoriser / dévaloriser une formation déclarée dans le kit depuis le détail d’une formation déclarée
 - #1314 - Valoriser / dévaloriser une expérience déclarée personnelle dans le kit depuis le détail d’une expérience déclarée personnelle
 - #1436 - Préparer la connexion à Cofolio
-- #1940 - [EVOL #1155] Ajouter les expériences déclarées aux éléments associés à une trace
 - #2034 - [REFACTO] Uniformiser la taille des boutons
 - #2098 - 4- [TECH] Structurer le ciblage des apprenants à partir des établissements et des groupes
-- #2103 - [EVOL #62 #814 #799 #632] Harmoniser les informations renseignées dans les expériences et formations déclarées
 - #2107 - 5- [TECH]  Différents rôles COFOLIO
 - #2109 - [TECH] Publication activité nationale
 - #2115 - 1- [BACK] Alimentation et gestion établissement principal
@@ -123,6 +118,8 @@
 - #2208 - [EVOL #1179] Supprimer une ou plusieurs associations de traces à une compétence déclarée
 - #2216 - [EVOL] Conserver le contexte du kit lors de la consultation du détail d’une trace
 - #2217 - [EVOL #1966] Reprendre le brouillon existant lors de la modification d’une activité dépubliée
+- #2322 - [EVOL #1149 #960] Identifier l’action de téléchargement d’un document depuis une activité
+- #2363 - [REFACTO] refactor and clean api file structure
 
 ### 🐞 Bugs ouverts
 
@@ -133,15 +130,15 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 2 / 130 (1%)
-- Restants : 128
+- Fonctionnels : 3 / 130 (2%)
+- Restants : 127
 - Epics : 16
 
 ### 🐞 Qualité
 
 - Bugs ouverts : 0
-- Bugs fermés : 0
-- Bugs total : 0
+- Bugs fermés : 1
+- Bugs total : 1
 
 ### 🎯 Epics
 
@@ -194,8 +191,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 2 / 57 (3%)
-- Restants : 55
+- Fonctionnels : 4 / 57 (7%)
+- Restants : 53
 - Epics : 14
 
 ### 🐞 Qualité
@@ -228,12 +225,10 @@
 - #160 - Rechercher une AMS
 - #195 - Ajouter une trace depuis une page niveau de compétence
 - #203 - Consulter les éléments associés à l’activité d’une AMS
-- #251 - Consulter les statuts d'une compétence visée par ma ou mes formation(s)
 - #357 - Consulter les compétences visées dans le cadre d'une AMS
 - #361 - Télécharger le contenu de son AMS
 - #364 - Consulter le déroulé des activités depuis la page détail d'une AMS
 - #387 - Consulter le détail d'une compétence visées par une formation passée
-- #426 - Choisir le nombre de compétences APC affichées par page
 - #498 - Consulter les associations d'une AMS depuis la page d'un niveau de compétence
 - #622 - Ajouter une page libre
 - #623 - Créer une page libre vierge par l'apprenant
@@ -243,6 +238,8 @@
 - #656 - Créer et mettre à disposition un template de page libre
 - #657 - Choisir un template de pages libres dans une liste exhaustive
 - #701 - Accéder à la messagerie contextualisée
+- #1017 - Accéder à un document joint transformé en trace depuis une trace
+- #1019 - Transformer un document joint en trace
 
 ### 🐞 Bugs ouverts
 
