@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-05
+# 📊 Product Report - 2026-11-06
 
 ## 🎯 Milestones suivies
 
@@ -19,8 +19,8 @@
 
 ### 🐞 Qualité
 
-- Bugs ouverts : 1
-- Bugs fermés : 178
+- Bugs ouverts : 0
+- Bugs fermés : 179
 - Bugs total : 179
 
 ### 🎯 Epics
@@ -62,7 +62,6 @@
 
 ### 🐞 Bugs ouverts
 
-- #1426 - [BUG] : griser les activités déjà associées
 
 ---
 
@@ -70,8 +69,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 83 / 122 (68%)
-- Restants : 39
+- Fonctionnels : 88 / 122 (72%)
+- Restants : 34
 - Epics : 15
 
 ### 🐞 Qualité
@@ -103,9 +102,6 @@
 - #12 - Ajouter une compétence établissement
 - #85 - Consulter la frise chronologique synthèse de mon parcours
 - #555 - Valoriser un élément sur le CV
-- #1308 - Valoriser / dévaloriser une expérience déclarée professionnelle dans le kit depuis le détail d’une expérience déclarée professionnelle
-- #1310 - Valoriser / dévaloriser une formation déclarée dans le kit depuis le détail d’une formation déclarée
-- #1314 - Valoriser / dévaloriser une expérience déclarée personnelle dans le kit depuis le détail d’une expérience déclarée personnelle
 - #1436 - Préparer la connexion à Cofolio
 - #2034 - [REFACTO] Uniformiser la taille des boutons
 - #2098 - 4- [TECH] Structurer le ciblage des apprenants à partir des établissements et des groupes
@@ -115,11 +111,14 @@
 - #2116 - 2- [BACK] Alimentation et gestion établissement secondaire
 - #2117 - 3- [BACK] Alimentation et gestion des groupes
 - #2136 - Télécharger les documents joints à un feedback reçu pour l'apprenant
-- #2208 - [EVOL #1179] Supprimer une ou plusieurs associations de traces à une compétence déclarée
-- #2216 - [EVOL] Conserver le contexte du kit lors de la consultation du détail d’une trace
 - #2217 - [EVOL #1966] Reprendre le brouillon existant lors de la modification d’une activité dépubliée
 - #2322 - [EVOL #1149 #960] Identifier l’action de téléchargement d’un document depuis une activité
 - #2363 - [REFACTO] refactor and clean api file structure
+- #2373 - [ENABLER] Déploiement env préproduction
+- #2379 - [ENABLER] Mise en place de l'authentification SAML via FER
+- #2418 - [REFACTO] Harmoniser la taille des cards selon leur usage
+- #2419 - [REFACTO] Uniformiser les menus d'actions avec le libellé "Gérer...
+- #2421 - [REFACTO] Uniformiser l'affichage des dates "Créé le" et "Modifié le"
 
 ### 🐞 Bugs ouverts
 
