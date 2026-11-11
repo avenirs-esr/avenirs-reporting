@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-10
+# 📊 Product Report - 2026-11-11
 
 ## 🎯 Milestones suivies
 
@@ -69,8 +69,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 90 / 122 (73%)
-- Restants : 32
+- Fonctionnels : 102 / 122 (83%)
+- Restants : 20
 - Epics : 15
 
 ### 🐞 Qualité
@@ -103,7 +103,6 @@
 - #85 - Consulter la frise chronologique synthèse de mon parcours
 - #555 - Valoriser un élément sur le CV
 - #1436 - Préparer la connexion à Cofolio
-- #2034 - [REFACTO] Uniformiser la taille des boutons
 - #2098 - 4- [TECH] Structurer le ciblage des apprenants à partir des établissements et des groupes
 - #2107 - 5- [TECH]  Différents rôles COFOLIO
 - #2109 - [TECH] Publication activité nationale
@@ -116,9 +115,10 @@
 - #2363 - [REFACTO] refactor and clean api file structure
 - #2373 - [ENABLER] Déploiement env préproduction
 - #2379 - [ENABLER] Mise en place de l'authentification SAML via FER
-- #2418 - [REFACTO] Harmoniser la taille des cards selon leur usage
-- #2419 - [REFACTO] Uniformiser les menus d'actions avec le libellé "Gérer...
-- #2421 - [REFACTO] Uniformiser l'affichage des dates "Créé le" et "Modifié le"
+- #2450 - [REFACTO] Corriger le détail d'un feedback STAFF sur mobile
+- #2460 - [REFACTO] Uniformiser l’identification et la validation des champs obligatoires
+- #2641 - [EVOL #1098 #1656] Transmettre les expériences déclarées associées lors d'une demande de feedback
+- #2674 - [EVOL #799] Associer des éléments à une formation déclarée lors de son ajout
 
 ### 🐞 Bugs ouverts
 
@@ -129,8 +129,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 3 / 132 (2%)
-- Restants : 129
+- Fonctionnels : 6 / 132 (4%)
+- Restants : 126
 - Epics : 16
 
 ### 🐞 Qualité
