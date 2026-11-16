@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-15
+# 📊 Product Report - 2026-11-16
 
 ## 🎯 Milestones suivies
 
@@ -190,8 +190,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 4 / 56 (7%)
-- Restants : 52
+- Fonctionnels : 4 / 55 (7%)
+- Restants : 51
 - Epics : 14
 
 ### 🐞 Qualité
@@ -236,9 +236,9 @@
 - #640 - Consulter la liste exhaustive de mes pages libres
 - #656 - Créer et mettre à disposition un template de page libre
 - #657 - Choisir un template de pages libres dans une liste exhaustive
-- #701 - Accéder à la messagerie contextualisée
 - #1017 - Accéder à un document joint transformé en trace depuis une trace
 - #1019 - Transformer un document joint en trace
+- #1075 - Supprimer un document joint
 
 ### 🐞 Bugs ouverts
 
