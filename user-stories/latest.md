@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-18
+# 📊 Product Report - 2026-11-19
 
 ## 🎯 Milestones suivies
 
@@ -249,8 +249,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 0 / 6 (0%)
-- Restants : 6
+- Fonctionnels : 0 / 7 (0%)
+- Restants : 7
 - Epics : 12
 
 ### 🐞 Qualité
@@ -282,6 +282,7 @@
 - #196 - Ajouter une trace depuis la page activité d’une AMS
 - #202 - Consulter le déroulé des activités d'une AMS
 - #398 - Consulter le nombre d'AMS associées à un niveau de compétence depuis la liste exhaustive des compétences visées par mes formations actuelles ou passées
+- #3192 - Mettre à disposition l'activité nationale « Mon portfolio du secondaire »
 
 ### 🐞 Bugs ouverts
 
