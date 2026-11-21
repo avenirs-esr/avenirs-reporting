@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-20
+# 📊 Product Report - 2026-11-21
 
 ## 🎯 Milestones suivies
 
@@ -13,8 +13,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 177 / 194 (91%)
-- Restants : 17
+- Fonctionnels : 180 / 194 (92%)
+- Restants : 14
 - Epics : 14
 
 ### 🐞 Qualité
@@ -45,9 +45,7 @@
 - #123 - Modifier ma photo de couverture
 - #973 - Se désinscrire d'une activité dans "Construire mon projet de vie"
 - #1062 - Terminer une activité dans "Construire mon projet de vie'
-- #1082 - Associer une trace à une expérience déclarée depuis le détail d'une trace
 - #1100 - Associer une compétence déclarée depuis le détail de son activité
-- #1101 - Supprimer une ou plusieurs association(s) depuis le détail d'une activité de "Construire mon projet de vie"
 - #1423 - Accessibilité - Garantir l'exploitabilité du MVP par tous les utilisateurs
 - #1672 - Consulter l'historique des feedbacks
 - #1676 - Mettre à jour une demande de feedback dans une activité de "Construire son projet de vie"
@@ -56,7 +54,6 @@
 - #1966 - Dépublier une activité publiée
 - #1985 - Modifier une activité publiée (sans apprenant inscrit)
 - #2046 - [EVOL #1648 #1649 #1650] Consulter et filtrer toutes mes demandes de feedback par activité
-- #2053 - Suppression totale du contenu d'une activité pour un apprenant
 - #2142 - [EVOL 960] Consulter et personnaliser la période optionnelle dans une activité
 - #3114 - [US] Audit accessibilité
 
@@ -129,8 +126,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 6 / 133 (4%)
-- Restants : 127
+- Fonctionnels : 6 / 134 (4%)
+- Restants : 128
 - Epics : 16
 
 ### 🐞 Qualité
@@ -192,8 +189,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 4 / 55 (7%)
-- Restants : 51
+- Fonctionnels : 4 / 56 (7%)
+- Restants : 52
 - Epics : 14
 
 ### 🐞 Qualité
