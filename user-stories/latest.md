@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-22
+# 📊 Product Report - 2026-11-23
 
 ## 🎯 Milestones suivies
 
@@ -126,14 +126,14 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 6 / 134 (4%)
-- Restants : 128
+- Fonctionnels : 6 / 133 (4%)
+- Restants : 127
 - Epics : 16
 
 ### 🐞 Qualité
 
-- Bugs ouverts : 2
-- Bugs fermés : 1
+- Bugs ouverts : 1
+- Bugs fermés : 2
 - Bugs total : 3
 
 ### 🎯 Epics
@@ -180,7 +180,6 @@
 
 ### 🐞 Bugs ouverts
 
-- #3193 - [BUG] [FE] Breadcrumbs manquants pour indiquer qu'il s'agit d'une sous-activité
 - #3198 - [BUG] Suppression des feedbacks déjà soumis lors du retrait du droit de réferant de feedback
 
 ---
