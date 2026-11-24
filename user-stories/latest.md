@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-23
+# 📊 Product Report - 2026-11-24
 
 ## 🎯 Milestones suivies
 
@@ -13,8 +13,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 180 / 194 (92%)
-- Restants : 14
+- Fonctionnels : 181 / 194 (93%)
+- Restants : 13
 - Epics : 14
 
 ### 🐞 Qualité
@@ -47,7 +47,6 @@
 - #1062 - Terminer une activité dans "Construire mon projet de vie'
 - #1100 - Associer une compétence déclarée depuis le détail de son activité
 - #1423 - Accessibilité - Garantir l'exploitabilité du MVP par tous les utilisateurs
-- #1672 - Consulter l'historique des feedbacks
 - #1676 - Mettre à jour une demande de feedback dans une activité de "Construire son projet de vie"
 - #1677 - Mettre à jour un feedback
 - #1846 - Modifier une activité publiée (avec inscrits)
@@ -66,8 +65,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 102 / 122 (83%)
-- Restants : 20
+- Fonctionnels : 103 / 122 (84%)
+- Restants : 19
 - Epics : 15
 
 ### 🐞 Qualité
@@ -107,7 +106,6 @@
 - #2116 - 2- [BACK] Alimentation et gestion établissement secondaire
 - #2117 - 3- [BACK] Alimentation et gestion des groupes
 - #2136 - Télécharger les documents joints à un feedback reçu pour l'apprenant
-- #2217 - [EVOL #1966] Reprendre le brouillon existant lors de la modification d’une activité dépubliée
 - #2322 - [EVOL #1149 #960] Identifier l’action de téléchargement d’un document depuis une activité
 - #2363 - [REFACTO] refactor and clean api file structure
 - #2373 - [ENABLER] Déploiement env préproduction
@@ -126,15 +124,15 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 6 / 133 (4%)
-- Restants : 127
+- Fonctionnels : 7 / 133 (5%)
+- Restants : 126
 - Epics : 16
 
 ### 🐞 Qualité
 
 - Bugs ouverts : 1
-- Bugs fermés : 2
-- Bugs total : 3
+- Bugs fermés : 3
+- Bugs total : 4
 
 ### 🎯 Epics
 
@@ -188,8 +186,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 4 / 56 (7%)
-- Restants : 52
+- Fonctionnels : 4 / 57 (7%)
+- Restants : 53
 - Epics : 14
 
 ### 🐞 Qualité
