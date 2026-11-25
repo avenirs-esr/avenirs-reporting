@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-24
+# 📊 Product Report - 2026-11-25
 
 ## 🎯 Milestones suivies
 
@@ -65,7 +65,7 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 103 / 122 (84%)
+- Fonctionnels : 104 / 123 (84%)
 - Restants : 19
 - Epics : 15
 
@@ -99,6 +99,7 @@
 - #85 - Consulter la frise chronologique synthèse de mon parcours
 - #555 - Valoriser un élément sur le CV
 - #1436 - Préparer la connexion à Cofolio
+- #1531 - Consulter le nombre d'inactifs depuis 30 jours sur une activité
 - #2098 - 4- [TECH] Structurer le ciblage des apprenants à partir des établissements et des groupes
 - #2107 - 5- [TECH]  Différents rôles COFOLIO
 - #2109 - [TECH] Publication activité nationale
@@ -113,7 +114,6 @@
 - #2450 - [REFACTO] Corriger le détail d'un feedback STAFF sur mobile
 - #2460 - [REFACTO] Uniformiser l’identification et la validation des champs obligatoires
 - #2641 - [EVOL #1098 #1656] Transmettre les expériences déclarées associées lors d'une demande de feedback
-- #2674 - [EVOL #799] Associer des éléments à une formation déclarée lors de son ajout
 
 ### 🐞 Bugs ouverts
 
@@ -124,8 +124,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 7 / 133 (5%)
-- Restants : 126
+- Fonctionnels : 14 / 133 (10%)
+- Restants : 119
 - Epics : 16
 
 ### 🐞 Qualité
