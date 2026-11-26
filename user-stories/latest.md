@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-25
+# 📊 Product Report - 2026-11-26
 
 ## 🎯 Milestones suivies
 
@@ -124,8 +124,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 14 / 133 (10%)
-- Restants : 119
+- Fonctionnels : 14 / 134 (10%)
+- Restants : 120
 - Epics : 16
 
 ### 🐞 Qualité
@@ -186,8 +186,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 4 / 57 (7%)
-- Restants : 53
+- Fonctionnels : 4 / 56 (7%)
+- Restants : 52
 - Epics : 14
 
 ### 🐞 Qualité
