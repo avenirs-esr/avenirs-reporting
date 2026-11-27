@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-26
+# 📊 Product Report - 2026-11-27
 
 ## 🎯 Milestones suivies
 
@@ -13,8 +13,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 181 / 194 (93%)
-- Restants : 13
+- Fonctionnels : 183 / 194 (94%)
+- Restants : 11
 - Epics : 14
 
 ### 🐞 Qualité
@@ -47,13 +47,11 @@
 - #1062 - Terminer une activité dans "Construire mon projet de vie'
 - #1100 - Associer une compétence déclarée depuis le détail de son activité
 - #1423 - Accessibilité - Garantir l'exploitabilité du MVP par tous les utilisateurs
-- #1676 - Mettre à jour une demande de feedback dans une activité de "Construire son projet de vie"
 - #1677 - Mettre à jour un feedback
 - #1846 - Modifier une activité publiée (avec inscrits)
 - #1966 - Dépublier une activité publiée
 - #1985 - Modifier une activité publiée (sans apprenant inscrit)
 - #2046 - [EVOL #1648 #1649 #1650] Consulter et filtrer toutes mes demandes de feedback par activité
-- #2142 - [EVOL 960] Consulter et personnaliser la période optionnelle dans une activité
 - #3114 - [US] Audit accessibilité
 
 ### 🐞 Bugs ouverts
@@ -65,8 +63,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 104 / 123 (84%)
-- Restants : 19
+- Fonctionnels : 105 / 123 (85%)
+- Restants : 18
 - Epics : 15
 
 ### 🐞 Qualité
@@ -106,7 +104,6 @@
 - #2115 - 1- [BACK] Alimentation et gestion établissement principal
 - #2116 - 2- [BACK] Alimentation et gestion établissement secondaire
 - #2117 - 3- [BACK] Alimentation et gestion des groupes
-- #2136 - Télécharger les documents joints à un feedback reçu pour l'apprenant
 - #2322 - [EVOL #1149 #960] Identifier l’action de téléchargement d’un document depuis une activité
 - #2363 - [REFACTO] refactor and clean api file structure
 - #2373 - [ENABLER] Déploiement env préproduction
@@ -130,8 +127,8 @@
 
 ### 🐞 Qualité
 
-- Bugs ouverts : 1
-- Bugs fermés : 3
+- Bugs ouverts : 0
+- Bugs fermés : 4
 - Bugs total : 4
 
 ### 🎯 Epics
@@ -178,7 +175,6 @@
 
 ### 🐞 Bugs ouverts
 
-- #3198 - [BUG] Suppression des feedbacks déjà soumis lors du retrait du droit de réferant de feedback
 
 ---
 
