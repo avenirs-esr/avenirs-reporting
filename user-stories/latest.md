@@ -1,4 +1,4 @@
-# 📊 Product Report - 2026-11-27
+# 📊 Product Report - 2026-11-28
 
 ## 🎯 Milestones suivies
 
@@ -63,8 +63,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 105 / 123 (85%)
-- Restants : 18
+- Fonctionnels : 104 / 123 (84%)
+- Restants : 19
 - Epics : 15
 
 ### 🐞 Qualité
@@ -104,6 +104,7 @@
 - #2115 - 1- [BACK] Alimentation et gestion établissement principal
 - #2116 - 2- [BACK] Alimentation et gestion établissement secondaire
 - #2117 - 3- [BACK] Alimentation et gestion des groupes
+- #2136 - Télécharger les documents joints à un feedback reçu pour l'apprenant
 - #2322 - [EVOL #1149 #960] Identifier l’action de téléchargement d’un document depuis une activité
 - #2363 - [REFACTO] refactor and clean api file structure
 - #2373 - [ENABLER] Déploiement env préproduction
@@ -121,15 +122,15 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 14 / 134 (10%)
-- Restants : 120
+- Fonctionnels : 14 / 135 (10%)
+- Restants : 121
 - Epics : 16
 
 ### 🐞 Qualité
 
-- Bugs ouverts : 0
+- Bugs ouverts : 1
 - Bugs fermés : 4
-- Bugs total : 4
+- Bugs total : 5
 
 ### 🎯 Epics
 
@@ -175,6 +176,7 @@
 
 ### 🐞 Bugs ouverts
 
+- #3174 - [BUG] [FE/BE] Bannière d'activité invalide dans le catalogue des activités
 
 ---
 
@@ -182,8 +184,8 @@
 
 ### 📈 Progression
 
-- Fonctionnels : 4 / 56 (7%)
-- Restants : 52
+- Fonctionnels : 4 / 57 (7%)
+- Restants : 53
 - Epics : 14
 
 ### 🐞 Qualité
